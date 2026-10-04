@@ -7,7 +7,8 @@ const NOTIFY = {
   silent: (m) => [t('n_micLive'), t('n_silentMsg', m.seconds)]
 };
 
-chrome.runtime.onMessage.addListener((msg, sender) => {
+chrome.runtime.onMessage.addListener((msg, sender, reply) => {
+  if (msg.type === 'testNotify') { testNotify().then(reply); return true; } // resposta assíncrona
   if (msg.type === 'notify') notify(msg, sender);
   else if (msg.type === 'panicAll') panic();
   else if (msg.type === 'stat') bump(msg.name);
@@ -16,14 +17,32 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
 async function notify(msg, sender) {
   const { language } = await chrome.storage.sync.get({ language: DEFAULTS.language });
   setLanguage(language);
-  const [title, message] = NOTIFY[msg.kind || 'silent'](msg);
-  chrome.notifications.create(`mmg-${sender.tab?.id ?? 0}`, {
-    type: 'basic',
-    iconUrl: 'src/icon128.png',
-    title,
-    message,
-    priority: 2
-  });
+  const [title, message] = (NOTIFY[msg.kind] || NOTIFY.silent)(msg);
+  try {
+    await chrome.notifications.create(`mmg-${sender.tab?.id ?? 0}`, {
+      type: 'basic', iconUrl: 'src/icon128.png', title, message, priority: 2
+    });
+  } catch (e) {
+    console.error('[MicCam Guard] notificação falhou:', e);
+  }
+}
+
+// Botão "Enviar notificação de teste" (Ajustes): separa problema do sistema de problema do gatilho.
+async function testNotify() {
+  const { language } = await chrome.storage.sync.get({ language: DEFAULTS.language });
+  setLanguage(language);
+  let level = 'unknown';
+  try { level = await chrome.notifications.getPermissionLevel(); } catch { /* API indisponível */ }
+  if (level === 'denied') return { ok: false, level };
+  try {
+    await chrome.notifications.create('mmg-test', {
+      type: 'basic', iconUrl: 'src/icon128.png', title: t('n_testTitle'), message: t('n_testMsg'), priority: 2
+    });
+    return { ok: true, level };
+  } catch (e) {
+    console.error('[MicCam Guard] notificação de teste falhou:', e);
+    return { ok: false, level, error: String(e?.message || e) };
+  }
 }
 
 // Contador local de proteções (nunca sai do navegador). Fila para não perder

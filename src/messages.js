@@ -140,7 +140,14 @@ const MESSAGES = {
     "p_silentShort": "silent {1}s",
     "p_noMeeting": "No meeting open",
     "p_language": "Language",
-    "p_langAuto": "Automatic (browser)"
+    "p_langAuto": "Automatic (browser)",
+    "n_testTitle": "MicCam Guard",
+    "n_testMsg": "Test notification: it works!",
+    "p_notifyTest": "Send test notification",
+    "p_notifySent": "Sent. Don't see it? Check Chrome's and your system's notification settings (Do Not Disturb).",
+    "p_notifyDenied": "Chrome is blocking this extension's notifications. Enable them in your system settings.",
+    "p_notifyError": "Could not send: {1}",
+    "c_reloadTab": "MicCam Guard was updated. Reload this tab to keep it working."
   },
   "pt_BR": {
     "extDescription": "Protege você em reuniões online: auto-mute, câmera desligada, confirmações e avisos para Meet, Teams e Zoom.",
@@ -282,6 +289,13 @@ const MESSAGES = {
     "p_silentShort": "em silêncio há {1}s",
     "p_noMeeting": "Nenhuma reunião aberta",
     "p_language": "Idioma",
-    "p_langAuto": "Automático (navegador)"
+    "p_langAuto": "Automático (navegador)",
+    "n_testTitle": "MicCam Guard",
+    "n_testMsg": "Notificação de teste: está funcionando!",
+    "p_notifyTest": "Enviar notificação de teste",
+    "p_notifySent": "Enviada. Não apareceu? Verifique as notificações do Chrome e do sistema (modo Não Perturbe).",
+    "p_notifyDenied": "O Chrome está bloqueando as notificações desta extensão. Ative-as nas configurações do sistema.",
+    "p_notifyError": "Não foi possível enviar: {1}",
+    "c_reloadTab": "O MicCam Guard foi atualizado. Recarregue esta aba para ele continuar funcionando."
   }
 };

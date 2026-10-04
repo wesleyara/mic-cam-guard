@@ -7,7 +7,14 @@
   // Config efetiva = base + perfil do horário + regras do site; recalculada a cada 5 s
   // para pegar a entrada/saída da janela de agendamento.
   const rebuild = () => { cfg = effectiveConfig(raw, platform.id); };
-  const stat = (name) => chrome.runtime.sendMessage({ type: 'stat', name }).catch(() => {});
+  // Depois que a extensão é recarregada/atualizada, o script antigo continua na aba mas perde
+  // o acesso às APIs: sendMessage lança "Extension context invalidated". Nada de quebrar o loop.
+  const contextAlive = () => !!chrome.runtime?.id;
+  const send = (msg) => {
+    if (!contextAlive()) return;
+    try { chrome.runtime.sendMessage(msg)?.catch?.(() => {}); } catch { /* contexto invalidado */ }
+  };
+  const stat = (name) => send({ type: 'stat', name });
   let stream = null, ctx = null, analyser = null, buf = null;
   let lastVoice = Date.now();
   let lastWarn = 0;
@@ -132,15 +139,21 @@
     overlay = null;
   }
 
+  // O botão do Meet pode levar mais que um tick (200 ms) para refletir o clique. Sem esta
+  // trava o loop clicaria de novo, religando o mic e repetindo a notificação.
+  const AUTO_MUTE_COOLDOWN_MS = 5000;
+  let lastAutoMute = 0;
+
   function autoMute(seconds) {
     const btn = findMicButton();
-    if (!btn) return;
+    if (!btn || Date.now() - lastAutoMute < AUTO_MUTE_COOLDOWN_MS) return;
+    lastAutoMute = Date.now();
     btn.click();
     stat('autoMutes');
     hideOverlay();
     showToast(t('c_autoMuted', seconds));
     if (cfg.nativeNotification && document.hidden) {
-      chrome.runtime.sendMessage({ type: 'notify', kind: 'autoMuted', seconds });
+      send({ type: 'notify', kind: 'autoMuted', seconds });
     }
   }
 
@@ -155,7 +168,7 @@
   function warn(seconds) {
     showOverlay(seconds);
     if (cfg.nativeNotification && document.hidden) {
-      chrome.runtime.sendMessage({ type: 'notify', kind: 'silent', seconds });
+      send({ type: 'notify', kind: 'silent', seconds });
     }
   }
 
@@ -294,7 +307,7 @@
     stat('mutedTalk');
     showToast(t('c_mutedTalk'));
     if (cfg.nativeNotification && document.hidden) {
-      chrome.runtime.sendMessage({ type: 'notify', kind: 'mutedTalk' });
+      send({ type: 'notify', kind: 'mutedTalk' });
     }
   }
 
@@ -316,14 +329,19 @@
     const removed = [...before].some((id) => !knownDevices.has(id));
     if (!removed || micState() !== true) return;
     showToast(t('c_deviceLost'));
-    if (cfg.nativeNotification && document.hidden) chrome.runtime.sendMessage({ type: 'notify', kind: 'deviceLost' });
+    if (cfg.nativeNotification && document.hidden) send({ type: 'notify', kind: 'deviceLost' });
   });
 
   // ---------- Loop ----------
   let prevOn = null;
 
   let lastRebuild = 0;
+  let staleWarned = false;
   setInterval(async () => {
+    if (!contextAlive()) {      // extensão recarregada: este script está órfão, só dá para avisar
+      if (!staleWarned) { staleWarned = true; showToast(t('c_reloadTab')); }
+      return;
+    }
     const now0 = Date.now();
     if (now0 - lastRebuild > 5000) { lastRebuild = now0; rebuild(); }
     if (!active()) return;

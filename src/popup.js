@@ -321,6 +321,18 @@ function renderMics(mics) {
   sel.value = current.micDeviceId;
 }
 
+// ---------- Notificação de teste ----------
+$('notifyTestBtn').onclick = () => {
+  const hint = $('notifyHint');
+  hint.textContent = '';
+  chrome.runtime.sendMessage({ type: 'testNotify' }, (res) => {
+    if (chrome.runtime.lastError || !res) hint.textContent = t('p_notifyError', chrome.runtime.lastError?.message || '?');
+    else if (res.ok) hint.textContent = t('p_notifySent');
+    else if (res.level === 'denied') hint.textContent = t('p_notifyDenied');
+    else hint.textContent = t('p_notifyError', res.error || '?');
+  });
+};
+
 // ---------- Pânico ----------
 $('panicBtn').onclick = () => chrome.runtime.sendMessage({ type: 'panicAll' });
 chrome.commands.getAll((cmds) => {

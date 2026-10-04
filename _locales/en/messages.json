@@ -471,5 +471,31 @@
   },
   "p_langAuto": {
     "message": "Automatic (browser)"
+  },
+  "n_testTitle": {
+    "message": "MicCam Guard"
+  },
+  "n_testMsg": {
+    "message": "Test notification: it works!"
+  },
+  "p_notifyTest": {
+    "message": "Send test notification"
+  },
+  "p_notifySent": {
+    "message": "Sent. Don't see it? Check Chrome's and your system's notification settings (Do Not Disturb)."
+  },
+  "p_notifyDenied": {
+    "message": "Chrome is blocking this extension's notifications. Enable them in your system settings."
+  },
+  "p_notifyError": {
+    "message": "Could not send: $P1$",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "c_reloadTab": {
+    "message": "MicCam Guard was updated. Reload this tab to keep it working."
   }
 }
