@@ -1,0 +1,20 @@
+const DEFAULTS = {
+  enabled: true,
+  threshold: 0.02,
+  silenceSeconds: 30,
+  repeatSeconds: 20,
+  nativeNotification: true,
+  autoMute: false,
+  autoMuteSeconds: 60,
+  muteOnJoin: false,
+  cameraOffOnJoin: false,
+  confirmUnmute: false,
+  confirmCamera: false,
+  forceMute: false,
+  forceCameraOff: false,
+  warnBeforeClose: false,
+  platformMeet: true,
+  platformTeams: true,
+  platformZoom: true,
+  theme: 'system'
+};
