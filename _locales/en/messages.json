@@ -1,0 +1,475 @@
+{
+  "extDescription": {
+    "message": "Protects you in online meetings: auto-mute, camera-off, confirmations and warnings for Meet, Teams and Zoom."
+  },
+  "cmdPanic": {
+    "message": "Panic: mute the mic and turn the camera off in every meeting tab"
+  },
+  "c_micLive": {
+    "message": "Microphone is live"
+  },
+  "c_mute": {
+    "message": "Mute"
+  },
+  "c_muteTitle": {
+    "message": "Mute ($P1$)",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "c_dismiss": {
+    "message": "Dismiss"
+  },
+  "c_cancel": {
+    "message": "Cancel"
+  },
+  "c_silentFor": {
+    "message": "You haven't spoken for $P1$s",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "c_silentAuto": {
+    "message": "You haven't spoken for $P1$s · auto-mute in $P2$s",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      },
+      "P2": {
+        "content": "$2"
+      }
+    }
+  },
+  "c_autoMuted": {
+    "message": "Microphone auto-muted after $P1$s of silence",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "c_mutedJoin": {
+    "message": "Microphone muted on join"
+  },
+  "c_camOffJoin": {
+    "message": "Camera turned off on join"
+  },
+  "c_forcedMute": {
+    "message": "Microphone forced to mute"
+  },
+  "c_forcedCam": {
+    "message": "Camera forced off"
+  },
+  "c_blockedMic": {
+    "message": "Microphone locked on mute"
+  },
+  "c_blockedCam": {
+    "message": "Camera locked off"
+  },
+  "c_confirmMicTitle": {
+    "message": "Turn on the microphone?"
+  },
+  "c_confirmMicSub": {
+    "message": "It will stay open for the call"
+  },
+  "c_confirmCamTitle": {
+    "message": "Turn on the camera?"
+  },
+  "c_confirmCamSub": {
+    "message": "It will be visible to the call"
+  },
+  "c_turnOn": {
+    "message": "Turn on"
+  },
+  "c_mutedTalk": {
+    "message": "You're muted — nobody can hear you"
+  },
+  "c_panicDone": {
+    "message": "Panic: microphone and camera off"
+  },
+  "n_micMuted": {
+    "message": "Microphone muted"
+  },
+  "n_micLive": {
+    "message": "Microphone is live"
+  },
+  "n_autoMutedMsg": {
+    "message": "Auto-muted after $P1$s of silence.",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "n_silentMsg": {
+    "message": "You haven't spoken for $P1$s. Mute?",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "n_mutedTalkTitle": {
+    "message": "You're muted"
+  },
+  "n_mutedTalkMsg": {
+    "message": "You are speaking with the microphone muted."
+  },
+  "p_active": {
+    "message": "Protection is active"
+  },
+  "p_paused": {
+    "message": "Protection is paused"
+  },
+  "p_enable": {
+    "message": "Enable"
+  },
+  "p_joinCall": {
+    "message": "Join a call"
+  },
+  "p_sensitivity": {
+    "message": "Sensitivity"
+  },
+  "p_activeProt": {
+    "message": "Active protections"
+  },
+  "p_noneEnabled": {
+    "message": "None enabled"
+  },
+  "p_stOffHere": {
+    "message": "Off here"
+  },
+  "p_live": {
+    "message": "Live"
+  },
+  "p_muted": {
+    "message": "Muted"
+  },
+  "p_on": {
+    "message": "On"
+  },
+  "p_off": {
+    "message": "Off"
+  },
+  "p_reload": {
+    "message": "Reload the tab"
+  },
+  "p_unmuteTest": {
+    "message": "Unmute to test"
+  },
+  "p_voiceDetected": {
+    "message": "Voice detected"
+  },
+  "p_silence": {
+    "message": "Silence"
+  },
+  "p_profiles": {
+    "message": "Profiles"
+  },
+  "p_profileCustom": {
+    "message": "Custom"
+  },
+  "p_profileBig": {
+    "message": "Large meeting"
+  },
+  "p_profileBigDesc": {
+    "message": "Join muted, camera off, ask before unmuting, auto-mute"
+  },
+  "p_profileOne": {
+    "message": "1:1"
+  },
+  "p_profileOneDesc": {
+    "message": "Light: only warns before closing the tab"
+  },
+  "p_profilePresent": {
+    "message": "Presenting"
+  },
+  "p_profilePresentDesc": {
+    "message": "Confirm camera, warn if you talk while muted"
+  },
+  "p_profileStrict": {
+    "message": "Strict"
+  },
+  "p_profileStrictDesc": {
+    "message": "Mic and camera locked off"
+  },
+  "p_panicBtn": {
+    "message": "Panic: mute everything"
+  },
+  "p_panicHint": {
+    "message": "Shortcut: $P1$",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "p_panicNoKey": {
+    "message": "Set a shortcut at chrome://extensions/shortcuts"
+  },
+  "p_autoMute": {
+    "message": "Auto Mute"
+  },
+  "p_autoMuteD": {
+    "message": "Mute after a stretch of silence"
+  },
+  "p_muteJoin": {
+    "message": "Mute on Join"
+  },
+  "p_muteJoinD": {
+    "message": "Start every call muted"
+  },
+  "p_camJoin": {
+    "message": "Auto Camera Off"
+  },
+  "p_camJoinD": {
+    "message": "Camera off when you join"
+  },
+  "p_confUnmute": {
+    "message": "Confirm Before Unmute"
+  },
+  "p_confUnmuteD": {
+    "message": "Ask before the mic goes live"
+  },
+  "p_confCam": {
+    "message": "Confirm Before Camera"
+  },
+  "p_confCamD": {
+    "message": "Ask before the camera turns on"
+  },
+  "p_mutedTalk": {
+    "message": "Talking While Muted"
+  },
+  "p_mutedTalkD": {
+    "message": "Warn when you speak with the mic muted. Keeps the mic open for analysis only"
+  },
+  "p_moreOpts": {
+    "message": "More options"
+  },
+  "p_lessOpts": {
+    "message": "Less options"
+  },
+  "p_forceMute": {
+    "message": "Always Force Mute"
+  },
+  "p_forceMuteD": {
+    "message": "Undo any attempt to unmute"
+  },
+  "p_forceCam": {
+    "message": "Always Force Camera Off"
+  },
+  "p_forceCamD": {
+    "message": "Undo any attempt to turn camera on"
+  },
+  "p_warnClose": {
+    "message": "Warn Before Close"
+  },
+  "p_warnCloseD": {
+    "message": "Confirm before leaving a call tab"
+  },
+  "p_nativeNotif": {
+    "message": "Native notification"
+  },
+  "p_nativeNotifD": {
+    "message": "When the tab is in background"
+  },
+  "p_warnAfter": {
+    "message": "Warn after silence (s)"
+  },
+  "p_repeatEvery": {
+    "message": "Repeat every (s)"
+  },
+  "p_autoMuteAfter": {
+    "message": "Auto Mute after (s)"
+  },
+  "p_micDevice": {
+    "message": "Microphone"
+  },
+  "p_micDeviceDefault": {
+    "message": "System default"
+  },
+  "p_micDeviceHint": {
+    "message": "Mic used to measure your voice. Open a call tab to list devices."
+  },
+  "p_platforms": {
+    "message": "Platforms"
+  },
+  "p_activeTab": {
+    "message": "Active in this tab"
+  },
+  "p_theme": {
+    "message": "Theme"
+  },
+  "p_light": {
+    "message": "Light"
+  },
+  "p_dark": {
+    "message": "Dark"
+  },
+  "p_system": {
+    "message": "System"
+  },
+  "p_chipAutoMute": {
+    "message": "Auto-mute"
+  },
+  "p_chipMuteJoin": {
+    "message": "Mute on join"
+  },
+  "p_chipCamJoin": {
+    "message": "Auto-camera off"
+  },
+  "p_chipConfMic": {
+    "message": "Mic confirmation"
+  },
+  "p_chipConfCam": {
+    "message": "Camera confirmation"
+  },
+  "p_chipMutedTalk": {
+    "message": "Muted-talk warning"
+  },
+  "p_chipForceMute": {
+    "message": "Force mute"
+  },
+  "p_chipForceCam": {
+    "message": "Force camera off"
+  },
+  "p_chipWarnClose": {
+    "message": "Close warning"
+  },
+  "p_scope": {
+    "message": "Rules for"
+  },
+  "p_scopeAll": {
+    "message": "All sites"
+  },
+  "p_scopeAllHint": {
+    "message": "Applies to every platform"
+  },
+  "p_scopeSiteHint": {
+    "message": "Only this site; others keep the global rules"
+  },
+  "p_scopeReset": {
+    "message": "Reset to all-sites rules"
+  },
+  "p_schedule": {
+    "message": "Schedule"
+  },
+  "p_scheduleOn": {
+    "message": "Enable schedule"
+  },
+  "p_scheduleOnD": {
+    "message": "Apply a stronger profile in a time window"
+  },
+  "p_scheduleFrom": {
+    "message": "From"
+  },
+  "p_scheduleTo": {
+    "message": "To"
+  },
+  "p_scheduleWeekdays": {
+    "message": "Weekdays only"
+  },
+  "p_scheduleProfile": {
+    "message": "Profile in window"
+  },
+  "p_deviceChange": {
+    "message": "Device Change Warning"
+  },
+  "p_deviceChangeD": {
+    "message": "Warn if headphones or a mic disconnect while the mic is live"
+  },
+  "p_chipDeviceChange": {
+    "message": "Device warning"
+  },
+  "c_deviceLost": {
+    "message": "An audio device was disconnected while your mic is live"
+  },
+  "n_deviceLostTitle": {
+    "message": "Audio device disconnected"
+  },
+  "n_deviceLostMsg": {
+    "message": "Your microphone is still live."
+  },
+  "p_statAuto": {
+    "message": "Auto-mutes"
+  },
+  "p_statBlocked": {
+    "message": "Accidents prevented"
+  },
+  "p_statTalk": {
+    "message": "Talking-while-muted alerts"
+  },
+  "p_statPanic": {
+    "message": "Panic uses"
+  },
+  "p_statsSince": {
+    "message": "Counting since $P1$. Stored only on this device.",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "p_statsReset": {
+    "message": "Reset counters"
+  },
+  "p_export": {
+    "message": "Export settings"
+  },
+  "p_import": {
+    "message": "Import settings"
+  },
+  "p_importOpen": {
+    "message": "Import (opens a tab)"
+  },
+  "p_importOk": {
+    "message": "$P1$ settings imported",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "p_importFail": {
+    "message": "Invalid settings file"
+  },
+  "p_beta": {
+    "message": "beta"
+  },
+  "p_tabHome": {
+    "message": "Home"
+  },
+  "p_tabRules": {
+    "message": "Protections"
+  },
+  "p_tabSettings": {
+    "message": "Settings"
+  },
+  "p_secAudio": {
+    "message": "Silence & audio"
+  },
+  "p_secData": {
+    "message": "Data"
+  },
+  "p_silentShort": {
+    "message": "silent $P1$s",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "p_noMeeting": {
+    "message": "No meeting open"
+  },
+  "p_language": {
+    "message": "Language"
+  },
+  "p_langAuto": {
+    "message": "Automatic (browser)"
+  }
+}

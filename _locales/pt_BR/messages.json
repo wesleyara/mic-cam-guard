@@ -1,0 +1,475 @@
+{
+  "extDescription": {
+    "message": "Protege você em reuniões online: auto-mute, câmera desligada, confirmações e avisos para Meet, Teams e Zoom."
+  },
+  "cmdPanic": {
+    "message": "Pânico: muta o microfone e desliga a câmera em todas as abas de reunião"
+  },
+  "c_micLive": {
+    "message": "Microfone ligado"
+  },
+  "c_mute": {
+    "message": "Mutar"
+  },
+  "c_muteTitle": {
+    "message": "Mutar ($P1$)",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "c_dismiss": {
+    "message": "Dispensar"
+  },
+  "c_cancel": {
+    "message": "Cancelar"
+  },
+  "c_silentFor": {
+    "message": "Você não fala há $P1$s",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "c_silentAuto": {
+    "message": "Você não fala há $P1$s · auto-mute em $P2$s",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      },
+      "P2": {
+        "content": "$2"
+      }
+    }
+  },
+  "c_autoMuted": {
+    "message": "Microfone mutado automaticamente após $P1$s de silêncio",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "c_mutedJoin": {
+    "message": "Microfone mutado ao entrar"
+  },
+  "c_camOffJoin": {
+    "message": "Câmera desligada ao entrar"
+  },
+  "c_forcedMute": {
+    "message": "Microfone forçado para mudo"
+  },
+  "c_forcedCam": {
+    "message": "Câmera forçada para desligada"
+  },
+  "c_blockedMic": {
+    "message": "Microfone bloqueado em mudo"
+  },
+  "c_blockedCam": {
+    "message": "Câmera bloqueada desligada"
+  },
+  "c_confirmMicTitle": {
+    "message": "Ligar o microfone?"
+  },
+  "c_confirmMicSub": {
+    "message": "Ele ficará aberto para a chamada"
+  },
+  "c_confirmCamTitle": {
+    "message": "Ligar a câmera?"
+  },
+  "c_confirmCamSub": {
+    "message": "Ela ficará visível para a chamada"
+  },
+  "c_turnOn": {
+    "message": "Ligar"
+  },
+  "c_mutedTalk": {
+    "message": "Você está mutado — ninguém consegue te ouvir"
+  },
+  "c_panicDone": {
+    "message": "Pânico: microfone e câmera desligados"
+  },
+  "n_micMuted": {
+    "message": "Microfone mutado"
+  },
+  "n_micLive": {
+    "message": "Microfone ligado"
+  },
+  "n_autoMutedMsg": {
+    "message": "Mutado automaticamente após $P1$s de silêncio.",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "n_silentMsg": {
+    "message": "Você não fala há $P1$s. Quer mutar?",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "n_mutedTalkTitle": {
+    "message": "Você está mutado"
+  },
+  "n_mutedTalkMsg": {
+    "message": "Você está falando com o microfone mutado."
+  },
+  "p_active": {
+    "message": "A proteção está ativa"
+  },
+  "p_paused": {
+    "message": "A proteção está pausada"
+  },
+  "p_enable": {
+    "message": "Ativar"
+  },
+  "p_joinCall": {
+    "message": "Entre em uma chamada"
+  },
+  "p_sensitivity": {
+    "message": "Sensibilidade"
+  },
+  "p_activeProt": {
+    "message": "Proteções ativas"
+  },
+  "p_noneEnabled": {
+    "message": "Nenhuma ativa"
+  },
+  "p_stOffHere": {
+    "message": "Desligada aqui"
+  },
+  "p_live": {
+    "message": "Ligado"
+  },
+  "p_muted": {
+    "message": "Mudo"
+  },
+  "p_on": {
+    "message": "Ligada"
+  },
+  "p_off": {
+    "message": "Desligada"
+  },
+  "p_reload": {
+    "message": "Recarregue a aba"
+  },
+  "p_unmuteTest": {
+    "message": "Ligue o mic para testar"
+  },
+  "p_voiceDetected": {
+    "message": "Voz detectada"
+  },
+  "p_silence": {
+    "message": "Silêncio"
+  },
+  "p_profiles": {
+    "message": "Perfis"
+  },
+  "p_profileCustom": {
+    "message": "Personalizado"
+  },
+  "p_profileBig": {
+    "message": "Reunião grande"
+  },
+  "p_profileBigDesc": {
+    "message": "Entra mudo, câmera off, confirma antes de ligar, auto-mute"
+  },
+  "p_profileOne": {
+    "message": "1:1"
+  },
+  "p_profileOneDesc": {
+    "message": "Leve: só avisa antes de fechar a aba"
+  },
+  "p_profilePresent": {
+    "message": "Apresentando"
+  },
+  "p_profilePresentDesc": {
+    "message": "Confirma a câmera, avisa se falar mutado"
+  },
+  "p_profileStrict": {
+    "message": "Rígido"
+  },
+  "p_profileStrictDesc": {
+    "message": "Microfone e câmera travados desligados"
+  },
+  "p_panicBtn": {
+    "message": "Pânico: mutar tudo"
+  },
+  "p_panicHint": {
+    "message": "Atalho: $P1$",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "p_panicNoKey": {
+    "message": "Defina um atalho em chrome://extensions/shortcuts"
+  },
+  "p_autoMute": {
+    "message": "Auto Mute"
+  },
+  "p_autoMuteD": {
+    "message": "Muta após um tempo de silêncio"
+  },
+  "p_muteJoin": {
+    "message": "Mutar ao Entrar"
+  },
+  "p_muteJoinD": {
+    "message": "Começa toda chamada mutado"
+  },
+  "p_camJoin": {
+    "message": "Câmera Off ao Entrar"
+  },
+  "p_camJoinD": {
+    "message": "Câmera desligada ao entrar"
+  },
+  "p_confUnmute": {
+    "message": "Confirmar ao Ligar o Mic"
+  },
+  "p_confUnmuteD": {
+    "message": "Pergunta antes de abrir o microfone"
+  },
+  "p_confCam": {
+    "message": "Confirmar ao Ligar a Câmera"
+  },
+  "p_confCamD": {
+    "message": "Pergunta antes de ligar a câmera"
+  },
+  "p_mutedTalk": {
+    "message": "Falando Mutado"
+  },
+  "p_mutedTalkD": {
+    "message": "Avisa quando você fala com o mic mutado. Mantém o mic aberto só para análise"
+  },
+  "p_moreOpts": {
+    "message": "Mais opções"
+  },
+  "p_lessOpts": {
+    "message": "Menos opções"
+  },
+  "p_forceMute": {
+    "message": "Sempre Forçar Mudo"
+  },
+  "p_forceMuteD": {
+    "message": "Desfaz qualquer tentativa de ligar o mic"
+  },
+  "p_forceCam": {
+    "message": "Sempre Forçar Câmera Off"
+  },
+  "p_forceCamD": {
+    "message": "Desfaz qualquer tentativa de ligar a câmera"
+  },
+  "p_warnClose": {
+    "message": "Avisar Antes de Fechar"
+  },
+  "p_warnCloseD": {
+    "message": "Confirma antes de sair de uma aba de chamada"
+  },
+  "p_nativeNotif": {
+    "message": "Notificação nativa"
+  },
+  "p_nativeNotifD": {
+    "message": "Quando a aba está em segundo plano"
+  },
+  "p_warnAfter": {
+    "message": "Avisar após silêncio (s)"
+  },
+  "p_repeatEvery": {
+    "message": "Repetir a cada (s)"
+  },
+  "p_autoMuteAfter": {
+    "message": "Auto Mute após (s)"
+  },
+  "p_micDevice": {
+    "message": "Microfone"
+  },
+  "p_micDeviceDefault": {
+    "message": "Padrão do sistema"
+  },
+  "p_micDeviceHint": {
+    "message": "Mic usado para medir sua voz. Abra uma aba de chamada para listar os dispositivos."
+  },
+  "p_platforms": {
+    "message": "Plataformas"
+  },
+  "p_activeTab": {
+    "message": "Ativa nesta aba"
+  },
+  "p_theme": {
+    "message": "Tema"
+  },
+  "p_light": {
+    "message": "Claro"
+  },
+  "p_dark": {
+    "message": "Escuro"
+  },
+  "p_system": {
+    "message": "Sistema"
+  },
+  "p_chipAutoMute": {
+    "message": "Auto-mute"
+  },
+  "p_chipMuteJoin": {
+    "message": "Mutar ao entrar"
+  },
+  "p_chipCamJoin": {
+    "message": "Câmera off ao entrar"
+  },
+  "p_chipConfMic": {
+    "message": "Confirmação do mic"
+  },
+  "p_chipConfCam": {
+    "message": "Confirmação da câmera"
+  },
+  "p_chipMutedTalk": {
+    "message": "Aviso falando mutado"
+  },
+  "p_chipForceMute": {
+    "message": "Forçar mudo"
+  },
+  "p_chipForceCam": {
+    "message": "Forçar câmera off"
+  },
+  "p_chipWarnClose": {
+    "message": "Aviso ao fechar"
+  },
+  "p_scope": {
+    "message": "Regras para"
+  },
+  "p_scopeAll": {
+    "message": "Todos os sites"
+  },
+  "p_scopeAllHint": {
+    "message": "Vale para todas as plataformas"
+  },
+  "p_scopeSiteHint": {
+    "message": "Só este site; os outros usam as regras globais"
+  },
+  "p_scopeReset": {
+    "message": "Voltar às regras de todos os sites"
+  },
+  "p_schedule": {
+    "message": "Agendamento"
+  },
+  "p_scheduleOn": {
+    "message": "Ativar agendamento"
+  },
+  "p_scheduleOnD": {
+    "message": "Aplica um perfil mais forte numa janela de horário"
+  },
+  "p_scheduleFrom": {
+    "message": "Das"
+  },
+  "p_scheduleTo": {
+    "message": "Até"
+  },
+  "p_scheduleWeekdays": {
+    "message": "Só dias úteis"
+  },
+  "p_scheduleProfile": {
+    "message": "Perfil na janela"
+  },
+  "p_deviceChange": {
+    "message": "Aviso de Dispositivo"
+  },
+  "p_deviceChangeD": {
+    "message": "Avisa se fone ou mic desconectar com o mic aberto"
+  },
+  "p_chipDeviceChange": {
+    "message": "Aviso de dispositivo"
+  },
+  "c_deviceLost": {
+    "message": "Um dispositivo de áudio foi desconectado com o seu mic aberto"
+  },
+  "n_deviceLostTitle": {
+    "message": "Dispositivo de áudio desconectado"
+  },
+  "n_deviceLostMsg": {
+    "message": "Seu microfone continua aberto."
+  },
+  "p_statAuto": {
+    "message": "Mutes automáticos"
+  },
+  "p_statBlocked": {
+    "message": "Acidentes evitados"
+  },
+  "p_statTalk": {
+    "message": "Alertas de fala mutado"
+  },
+  "p_statPanic": {
+    "message": "Usos do pânico"
+  },
+  "p_statsSince": {
+    "message": "Contando desde $P1$. Guardado só neste dispositivo.",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "p_statsReset": {
+    "message": "Zerar contadores"
+  },
+  "p_export": {
+    "message": "Exportar configurações"
+  },
+  "p_import": {
+    "message": "Importar configurações"
+  },
+  "p_importOpen": {
+    "message": "Importar (abre uma aba)"
+  },
+  "p_importOk": {
+    "message": "$P1$ configurações importadas",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "p_importFail": {
+    "message": "Arquivo de configurações inválido"
+  },
+  "p_beta": {
+    "message": "beta"
+  },
+  "p_tabHome": {
+    "message": "Início"
+  },
+  "p_tabRules": {
+    "message": "Proteções"
+  },
+  "p_tabSettings": {
+    "message": "Ajustes"
+  },
+  "p_secAudio": {
+    "message": "Silêncio e áudio"
+  },
+  "p_secData": {
+    "message": "Dados"
+  },
+  "p_silentShort": {
+    "message": "em silêncio há $P1$s",
+    "placeholders": {
+      "P1": {
+        "content": "$1"
+      }
+    }
+  },
+  "p_noMeeting": {
+    "message": "Nenhuma reunião aberta"
+  },
+  "p_language": {
+    "message": "Idioma"
+  },
+  "p_langAuto": {
+    "message": "Automático (navegador)"
+  }
+}
